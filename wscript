@@ -99,8 +99,8 @@ def configure(ctx):
         ctx.env['cshlib_PATTERN'] = 'lib%s.dll'
 
     if target_platform == 'darwin':
-        ctx.env.CFLAGS += ['-arch', 'i386', '-arch', 'x86_64']
-        ctx.env.LINKFLAGS += ['-arch', 'i386', '-arch', 'x86_64']
+        ctx.env.CFLAGS += [ '-arch', 'x86_64']
+        ctx.env.LINKFLAGS += [ '-arch', 'x86_64']
         ctx.env.FRAMEWORK = ['CoreFoundation', 'AudioToolbox', 'Accelerate']
         ctx.define('HAVE_ACCELERATE', 1)
 
