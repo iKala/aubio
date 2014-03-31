@@ -108,7 +108,7 @@ def configure(ctx):
         ctx.define('HAVE_ACCELERATE', 1)
         ctx.define('TARGET_OS_IPHONE', 1)
         ctx.env.FRAMEWORK = ['CoreFoundation', 'AudioToolbox', 'Accelerate']
-        SDKVER="7.0"
+        SDKVER="7.1"
         MINSDKVER="6.1"
         ctx.env.CFLAGS += ['-std=c99']
         if target_platform == 'ios':
